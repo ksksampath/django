@@ -31,7 +31,7 @@ def logout(request):
     return redirect('login_page')
 def create_page(request):
     return render(request,'register.html')
-from django.http import HttpResponse
+# from django.http import HttpResponse
 @csrf_exempt
 def create_account(request):
     if request.method=="POST":
@@ -42,7 +42,7 @@ def create_account(request):
         password = request.POST.get('password')
         # confirmpassword = request.POST.get('confirmpassword')
         crnt_sts = 1
-        new_user = user_master.objects.create(first_name=first_name,last_name=last_name,mail_id=mail_id,phno=phno,crnt_sts=crnt_sts,createdby=0)
+        new_user = user_master(first_name=first_name,last_name=last_name,mail_id=mail_id,phno=phno,crnt_sts=crnt_sts,password=password,createdby=0)
         new_user.save()
         contex = { 'message' : 'Successfully Saved your Details and New account created'}
         return render(request,'login_page.html',contex)

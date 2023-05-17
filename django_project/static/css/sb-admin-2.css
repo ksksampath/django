@@ -10867,7 +10867,9 @@ a:focus {
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+
+  background: url("https://ksksampath-glorious-goldfish-wr95g9974vp2g7xq-8000.preview.app.github.dev/static/img/undraw_posting_photo.svg");
+  /* background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800"); */
   background-position: center;
   background-size: cover;
 }
