@@ -29,7 +29,7 @@ class user_master(models.Model):
     marital_status=models.IntegerField(default=0)
     tms_status=models.IntegerField(default=0)
     ass_role=models.CharField(max_length=10,null=True,blank=True)
-    qualification=models.CharField(max_length=20,default='SSC',null=True,blank=True)    
+    qualification=models.CharField(max_length=20,default='B.Tech CSE',null=True,blank=True)    
     # marriage_date=models.DateField(default='0000-00-00',null=True,blank=True)
     def __str__(self):
         return str(self.userid)
