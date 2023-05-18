@@ -49,3 +49,6 @@ def create_account(request):
         return render(request,'login_page.html',contex)       
     else:        
         return redirect('create_page')
+def forgot_pass_page(request):
+    contex = { 'message' : 'Please enter required fields to Re-collect your account',}
+    return render(request,'forgot-password.html',contex)
